@@ -7,7 +7,7 @@ import xyz.sethy.minigame.{GameState, Main}
 /**
   * Created by Seth on 29/04/2017.
   */
-abstract class PreJoinListener extends Listener
+class PreJoinListener extends Listener
 {
   @EventHandler
   def onPreJoin(event: AsyncPlayerPreLoginEvent): Unit =

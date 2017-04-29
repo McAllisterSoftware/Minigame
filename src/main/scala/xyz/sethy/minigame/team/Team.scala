@@ -6,33 +6,15 @@ import org.bukkit.entity.Player
 /**
   * Created by Seth on 29/04/2017.
   */
-abstract class Team
+class Team(colour: ChatColor)
 {
-  var colour : ChatColor
-  var players : List[Player]
-  var commander : Player
-  var energy : Double
+  private var _players : List[Player] = _
+  private var _commander : Player = _
+  private var _energy : Double = 0
 
-  def Team(colour: ChatColor, players : List[Player], commander : Player): Unit =
-  {
-    this.colour = colour
-    this.players = players
-    this.commander = commander
-    this.energy = 0.0D
-  }
+  def players: List[Player] = _players
 
-  def getColour() : Unit =
-  {
-    colour
-  }
+  def commander: Player = _commander
 
-  def getPlayers() : Unit =
-  {
-    players
-  }
-
-  def setCommander(commander : Player): Unit =
-  {
-    this.commander = commander
-  }
+  def commander_= (value: Player): Unit = _commander = value
 }
