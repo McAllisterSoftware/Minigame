@@ -3,9 +3,9 @@ package xyz.sethy.minigame;
 /**
  * Created by Seth on 29/04/2017.
  */
-public enum GameState
+object GameState extends Enumeration
 {
-    LOADING,
+    val LOADING,
     PREGAME,
-    IN_GAME
+    IN_GAME = Value
 }
